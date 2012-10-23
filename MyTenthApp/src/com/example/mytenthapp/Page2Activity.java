@@ -23,6 +23,8 @@ public class Page2Activity extends Activity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        pop = 0;
+        pizza = 0;
         setContentView(R.layout.activity_page2);
     }
     
@@ -41,8 +43,6 @@ public class Page2Activity extends Activity {
     /** Called when the user clicks the 'To Page 3' button */
     public void sendMessage3(View view) {
         Intent intent = new Intent(this, Page3Activity.class);
-        //EditText editText3 = (EditText) findViewById(R.id.editText4);
-        //String s = editText3.getText().toString();
         intent.putExtra(EXTRA_MESSAGE_3_pizza, (new Integer(pizza)).toString());
         intent.putExtra(EXTRA_MESSAGE_3_soda, (new Integer(pop)).toString());
         startActivity(intent);

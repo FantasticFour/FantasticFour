@@ -9,7 +9,7 @@ import android.widget.EditText;
 public class Page3Activity extends Activity {
 	
 	
-	public String passPizza= "";
+	public String passPizza= "initial";
 	public String passPop= "";
 	
 	public final static String EXTRA_MESSAGE_3 = "com.example.mytenthapp.MESSAGE_3";
@@ -21,11 +21,9 @@ public class Page3Activity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_page3);
         
-        Intent intent = new Intent(this, Page3Activity.class);
+        Intent intent = getIntent();
         passPizza = intent.getStringExtra(Page2Activity.EXTRA_MESSAGE_3_pizza);
-        
-        passPop = intent.getStringExtra(Page2Activity.EXTRA_MESSAGE_3_soda); 
-
+        passPop = intent.getStringExtra(Page2Activity.EXTRA_MESSAGE_3_soda);
     }
     
     /** Called when the user clicks the 'To Page 4' button */

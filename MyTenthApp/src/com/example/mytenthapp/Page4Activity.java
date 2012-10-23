@@ -28,11 +28,11 @@ public class Page4Activity extends Activity {
         String message1 = intent.getStringExtra(Page3Activity.PASSPIZZA);
         //System.out.println(intent.getStringExtra(Page3Activity.PASSPIZZA));
         TextView myTextView1= (TextView) findViewById(R.id.number_pizzas);
-        myTextView1.setText("2");
+        myTextView1.setText(message1);
         
         String message2 = intent.getStringExtra(Page3Activity.PASSPOP);
         TextView myTextView2= (TextView) findViewById(R.id.number_sodas);
-        myTextView2.setText("3");        
+        myTextView2.setText(message2);        
         
         String message = intent.getStringExtra(Page3Activity.EXTRA_MESSAGE_3);
         TextView myTextView= (TextView) findViewById(R.id.order_total);
@@ -61,21 +61,21 @@ public class Page4Activity extends Activity {
         intent.putExtra(EXTRA_MESSAGE_4, message);
         startActivity(intent);
         
-        String state = Environment.getExternalStorageState();
+//        String state = Environment.getExternalStorageState();
         
-        System.out.println(state);
-        if (Environment.MEDIA_MOUNTED.equals(state)){
-        	System.out.println(state);
-        	//SDcard is available
-        	File f=new File("/sdcard/test.txt");
-        	if (!f.exists()) {
-        		//File does not exists
-        		try {
-					f.createNewFile();
-				} catch (IOException e) {
-					System.out.println(e);
-				}
-        	}
-        }
+//        System.out.println(state);
+//        if (Environment.MEDIA_MOUNTED.equals(state)){
+//        	System.out.println(state);
+//        	//SDcard is available
+//        	File f=new File("/sdcard/test.txt");
+//        	if (!f.exists()) {
+//        		//File does not exists
+//        		try {
+//					f.createNewFile();
+//				} catch (IOException e) {
+//					System.out.println(e);
+//				}
+//        	}
+//        }
     }
 }
